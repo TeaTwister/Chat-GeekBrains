@@ -1,0 +1,44 @@
+.loginBackground {
+    -fx-background-color: #fffdf2;
+    -fx-background-image: url("triangles.png");
+}
+
+.buttonJFX {
+    -fx-background-color: rgba(236, 164, 0, .3);
+}
+
+.interactiveText {
+    -fx-font: 28px "Lucida Console";
+}
+
+.chatText {
+    -fx-font: 16px "Verdana";
+}
+
+.textAreaBack {
+    -fx-background-color: rgba(255, 255, 255, .75);
+}
+
+.transparentTextArea {
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0px ;
+}
+
+.transparentTextArea > .viewport {
+    -fx-background-color: transparent ;
+}
+
+.senderInfo {
+    -fx-text-fill: #888888;
+}
+
+.chatBox {
+    -fx-font-size: 20px;
+    -fx-min-width: 300px;
+    -fx-max-width: 600px;
+    -fx-min-height: 40px;
+    -fx-hbar-policy: NEVER;
+    -fx-vbar-policy: NEVER; 
+    -fx-background-color: rgba(227, 227, 227, .50);
+
+}
