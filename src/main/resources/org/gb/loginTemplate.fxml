@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.gb.PrimaryController">
+    <Pane prefHeight="578.0" prefWidth="701.0" styleClass="loginBackground" stylesheets="@style.css">
+        <effect>
+          <GaussianBlur radius="7.0"/>
+        </effect>
+    </Pane>
+    <VBox alignment="TOP_CENTER" prefHeight="578.0" prefWidth="701.0" stylesheets="@style.css">
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0"/>
+        </padding>
+        <HBox alignment="TOP_RIGHT" styleClass="textAreaBack" VBox.vgrow="NEVER">
+            <Button contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="653.0" layoutY="10.0"
+                    mnemonicParsing="false" onAction="#minimize" styleClass="transparentTextArea" text="Button">
+                <graphic>
+                    <ImageView>
+                        <Image url="@minimize.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="653.0" layoutY="10.0"
+                    mnemonicParsing="false" onAction="#maximize" styleClass="transparentTextArea" text="Button">
+                <graphic>
+                    <ImageView>
+                        <Image url="@maximize.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#exit"
+                    styleClass="transparentTextArea" text="Button">
+                <graphic>
+                    <ImageView styleClass="transparentTextArea">
+                        <Image url="@close.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+        <Label alignment="TOP_CENTER" text="Welcome, traveler">
+            <font>
+                <Font name="Georgia" size="72.0"/>
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" prefWidth="505.0" text="Come in and tell us your story">
+            <font>
+                <Font name="Verdana" size="28.0"/>
+            </font>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </Label>
+        <JFXTextField fx:id="login" alignment="TOP_CENTER" maxWidth="499.0" prefHeight="41.0" prefWidth="505.0"
+                      promptText="Tell us your name">
+            <font>
+                <Font name="Lucida Console" size="24.0"/>
+            </font>
+            <VBox.margin>
+                <Insets top="64.0"/>
+            </VBox.margin>
+        </JFXTextField>
+        <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="505.0"
+               text="We don't recognise this name" textAlignment="CENTER" textFill="RED" visible="false">
+            <padding>
+                <Insets bottom="12.0" top="6.0"/>
+            </padding>
+            <font>
+                <Font name="Trebuchet MS" size="20.0"/>
+            </font>
+        </Label>
+        <JFXPasswordField alignment="TOP_CENTER" disable="true" maxWidth="505.0" prefWidth="505.0"
+                          promptText="And your password" visible="false">
+            <font>
+                <Font name="Lucida Console" size="24.0"/>
+            </font>
+            <VBox.margin>
+                <Insets top="64.0"/>
+            </VBox.margin>
+        </JFXPasswordField>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="505.0"
+               text="It seems you have forgotten the right password" textAlignment="CENTER" textFill="RED"
+               visible="false">
+            <padding>
+                <Insets bottom="12.0" top="6.0"/>
+            </padding>
+            <font>
+                <Font name="Trebuchet MS" size="20.0"/>
+            </font>
+        </Label>
+        <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#switchToSecondary" ripplerFill="#c8a403"
+                   styleClass="transparentTextArea" text="Sign In" textAlignment="CENTER">
+            <font>
+                <Font name="Lucida Console" size="24.0"/>
+            </font>
+            <graphic>
+                <ImageView>
+                    <Image url="@login.png"/>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </VBox>
+</StackPane>
